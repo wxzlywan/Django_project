@@ -1,5 +1,5 @@
 $(function(){
-	$.get("/home/lynn/Desktop/Djang/yibanmall/static/json/LBTY.json",function(data){
+	$.get("/LBTY.json",function(data){
 		for(var i=0;i<data.length;i++){
 			var obj=data[i];
 			var A=$("<a href=''></a>");
@@ -11,7 +11,7 @@ $(function(){
 		}
 		
 	})
-	
-	
-	
 })
+
+
+

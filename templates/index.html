@@ -183,15 +183,16 @@
 		
 		<script src="{% static 'js/jquery-1.12.3.js' %}"></script>
 		<script src="{% static 'js/jquery.cookie.js' %}"></script>
-		<script src="{% static 'js/index.js' %}"></script>
-		<script src="{% static 'js/shops.js' %}"></script>
+{#		<script src="{% static 'js/index.js' %}"></script>#}
+{#		<script src="{% static 'js/shops.js' %}"></script>#}
 		<script src="{% static 'js/warpY.js' %}"></script>
-		
-		
-		<script src="{% static 'js/LBTX1.js' %}"></script>
-		<script src="{% static 'js/LBTX2.js' %}"></script>
-		<script src="{% static 'js/LBTX3.js' %}"></script>
-		<script src="{% static 'js/LBTY.js' %}"></script>
+{#		<script src="{% static 'js/LBTY.js' %}"></script>#}
+        <script src="{% static 'js/LBTX1.js' %}"></script>
+        <script src="{% static 'js/LBTX2.js' %}"></script>
+        <script src="{% static 'js/LBTX3.js' %}"></script>
+
+
+
 	</head>
 	<body>
 		
@@ -492,7 +493,7 @@
         				<span></span>
         				<del></del>
         				<i></i>
-        			</li>-->        			
+        			</li>-->
         		</ul>        		        		
         	</div>        	
         </div>
@@ -506,18 +507,37 @@
 	        </div>
 	        <div class="m-content-wrapy">
 	        	<div class="wrapy-nav">
+
+
 	        		<a href="#" class="UP">
 	        			<span class="I-ico" style="font-size: 30px;">&#xe759;</span>
 	        		</a>
 	        		<div class="wrapy-photo">
-	        		</div>
-	        		<a href="#" class="UP" style="position: absolute;bottom: 0px; border-bottom: 0px;">
+                        <div class="LBY">
+                        {% for brand in brands %}
+                            <a href class="m-content-con m-content-wrapy wrapy LBY" style="display: block">
+                                <img src="{{ brand }}" >
+                            </a>
+                        {% endfor %}
+                        </div>
+                        <a href="#" class="UP" style="position: absolute;bottom: 0px; border-bottom: 0px;">
 	        			<span class="I-ico" style="font-size: 30px;">&#xe705;</span>
 	        		</a>
-	        	</div>
+	        	    </div>
 	        	<div class="wrapy">
-	        		<div class="LBY">
-	        			
+	        		<div class="LBY" >
+
+                        {% for good in goods %}
+                            {% if good == good_one %}
+                                <a href="#" class="m-content-con m-content-wrapy wrapy-nav wrapy-photo wrapy-nav_border" style="display: block" >
+                                <img src="{{ good.img }}">
+                            </a>
+                            {% else %}
+                                <a href="#" class="m-content-con m-content-wrapy wrapy-nav wrapy-photo" style="display: block">
+                                <img src="{{ good.img }}">
+                            </a>
+                            {% endif %}
+                        {% endfor %}
 	        		</div>
 	        	</div>
 	        </div>
@@ -541,11 +561,87 @@
         		<div class="m-content-women">
         			<span class="prev1"><</span>
         			<span class="next1">></span>
-        			<div class="DIVS">
-	        			<div class="DIV"></div>
-	        			<div class="DIV"></div>
-	        			<div class="DIV"></div>
-	        			<div class="DIV"></div>
+        			<div class="DIVS" style="left: 0px">
+	        			<div class="DIV">
+                            <div style="position: relative">
+                                {% for item1 in data1 %}
+                                    <a href="#">
+                                        <img src="{{ item1.img }}" style="width: 407px;height: 613px" >
+                                    </a>
+                                    <h6 style="position: absolute; left: 0px;bottom: 30px;">{{ item1.shop }}</h6>
+                                    <h4 style="position: absolute; left: 0px;bottom: 10px;">{{ item1.price }}</h4>
+                                {% endfor %}
+                                </div>
+                            {% for item2 in data2 %}
+                                <div class="lbt_div_style1">
+                                    <a href="#">
+                                        <img src="{{ item2.img }}" >
+                                    </a>
+                                    <h6>{{ item2.shop }}</h6>
+                                    <h4>{{ item2.price }}</h4>
+                                </div>
+                            {% endfor %}
+                        </div>
+	        			<div class="DIV">
+                            <div style="position: relative">
+                                {% for item3 in data3 %}
+                                    <a href="#">
+                                        <img src="{{ item3.img }}" style="width: 407px;height: 613px" >
+                                    </a>
+                                    <h6 style="position: absolute; left: 0px;bottom: 30px;">{{ item3.shop }}</h6>
+                                    <h4 style="position: absolute; left: 0px;bottom: 10px;">{{ item3.price }}</h4>
+                                {% endfor %}
+                                </div>
+                            {% for item4 in data4 %}
+                                <div class="lbt_div_style1">
+                                    <a href="#">
+                                        <img src="{{ item4.img }}" >
+                                    </a>
+                                    <h6>{{ item4.shop }}</h6>
+                                    <h4>{{ item4.price }}</h4>
+                                </div>
+                            {% endfor %}
+                        </div>
+	        			<div class="DIV">
+                            <div style="position: relative">
+                            {% for item5 in data5 %}
+                                <a href="#">
+                                    <img src="{{ item5.img }}" style="width: 407px;height: 613px" >
+                                </a>
+                                <h6 style="position: absolute; left: 0px;bottom: 30px;">{{ item5.shop }}</h6>
+                                <h4 style="position: absolute; left: 0px;bottom: 10px;">{{ item5.price }}</h4>
+                            {% endfor %}
+                            </div>
+                            {% for item6 in data6 %}
+                                <div class="lbt_div_style1">
+                                    <a href="#">
+                                        <img src="{{ item6.img }}" >
+                                    </a>
+                                    <h6>{{ item6.shop }}</h6>
+                                    <h4>{{ item6.price }}</h4>
+                                </div>
+                            {% endfor %}
+                        </div>
+	        			<div class="DIV">
+                            <div style="position: relative">
+                            {% for item7 in data7 %}
+                                <a href="#">
+                                    <img src="{{ item7.img }}" style="width: 407px;height: 613px" >
+                                </a>
+                                <h6 style="position: absolute; left: 0px;bottom: 30px;">{{ item7.shop }}</h6>
+                                <h4 style="position: absolute; left: 0px;bottom: 10px;">{{ item7.price }}</h4>
+                            {% endfor %}
+                            </div>
+                            {% for item8 in data8 %}
+                                <div class="lbt_div_style1">
+                                    <a href="#">
+                                        <img src="{{ item8.img }}" >
+                                    </a>
+                                    <h6>{{ item8.shop }}</h6>
+                                    <h4>{{ item8.price }}</h4>
+                                </div>
+                            {% endfor %}
+                        </div>
         			</div>
         		</div>
         	</div>
@@ -565,10 +661,87 @@
         			<span class="prev2"><</span>
         			<span class="next2">></span>
         			<div class="DIVS">
-	        			<div class="DIV"></div>
-	        			<div class="DIV"></div>
-	        			<div class="DIV"></div>
-	        			<div class="DIV"></div>
+	        			<div class="DIV">
+                            <div style="position: relative">
+                                {% for item9 in data9 %}
+                                    <a href="#">
+                                        <img src="{{ item9.img }}" style="width: 407px;height: 613px" >
+                                    </a>
+                                    <h6 style="position: absolute; left: 0px;bottom: 30px;">{{ item9.shop }}</h6>
+                                    <h4 style="position: absolute; left: 0px;bottom: 10px;">{{ item9.price }}</h4>
+                                {% endfor %}
+                            </div>
+                            {% for item10 in data10 %}
+                                <div class="lbt_div_style1">
+                                    <a href="#">
+                                        <img src="{{ item10.img }}" >
+                                    </a>
+                                    <h6>{{ item10.shop }}</h6>
+                                    <h4>{{ item10.price }}</h4>
+                                </div>
+                            {% endfor %}
+                        </div>
+	        			<div class="DIV">
+                            <div style="position: relative">
+                                {% for item11 in data11 %}
+                                    <a href="#">
+                                        <img src="{{ item11.img }}" style="width: 407px;height: 613px" >
+                                    </a>
+                                    <h6 style="position: absolute; left: 0px;bottom: 30px;">{{ item11.shop }}</h6>
+                                    <h4 style="position: absolute; left: 0px;bottom: 10px;">{{ item11.price }}</h4>
+                                {% endfor %}
+                                </div>
+                            {% for item12 in data12 %}
+                                <div class="lbt_div_style1">
+                                    <a href="#">
+                                        <img src="{{ item12.img }}" >
+                                    </a>
+                                    <h6>{{ item12.shop }}</h6>
+                                    <h4>{{ item12.price }}</h4>
+                                </div>
+                            {% endfor %}
+                        </div>
+	        			<div class="DIV">
+
+                            <div style="position: relative">
+                                {% for item13 in data13 %}
+                                    <a href="#">
+                                        <img src="{{ item13.img }}" style="width: 407px;height: 613px" >
+                                    </a>
+                                    <h6 style="position: absolute; left: 0px;bottom: 30px;">{{ item13.shop }}</h6>
+                                    <h4 style="position: absolute; left: 0px;bottom: 10px;">{{ item13.price }}</h4>
+                                {% endfor %}
+                            </div>
+                            {% for item14 in data14 %}
+                                <div class="lbt_div_style1">
+                                    <a href="#">
+                                        <img src="{{ item14.img }}" >
+                                    </a>
+                                    <h6>{{ item14.shop }}</h6>
+                                    <h4>{{ item14.price }}</h4>
+                                </div>
+                            {% endfor %}
+                        </div>
+	        			<div class="DIV">
+                            <div style="position: relative">
+                                {% for item15 in data15 %}
+                                    <a href="#">
+                                        <img src="{{ item15.img }}" style="width: 407px;height: 615px" >
+                                    </a>
+                                    <h6 style="position: absolute; left: 0px;bottom: 30px;">{{ item15.shop }}</h6>
+                                    <h4 style="position: absolute; left: 0px;bottom: 10px;">{{ item15.price }}</h4>
+                                {% endfor %}
+                                </div>
+                            {% for item16 in data16 %}
+                                <div class="lbt_div_style1">
+                                    <a href="#">
+                                        <img src="{{ item16.img }}" >
+                                    </a>
+                                    <h6>{{ item16.shop }}</h6>
+                                    <h4>{{ item16.price }}</h4>
+                                </div>
+                            {% endfor %}
+                        </div>
         			</div>
         		</div>
         	</div>
@@ -588,10 +761,86 @@
         			<span class="prev3"><</span>
         			<span class="next3">></span>
         			<div class="DIVS">
-	        			<div class="DIV"></div>
-	        			<div class="DIV"></div>
-	        			<div class="DIV"></div>
-	        			<div class="DIV"></div>
+	        			<div class="DIV">
+                            <div style="position: relative">
+                                {% for item17 in data17 %}
+                                    <a href="#">
+                                        <img src="{{ item17.img }}" style="width: 407px;height: 617px" >
+                                    </a>
+                                    <h6 style="position: absolute; left: 0px;bottom: 30px;">{{ item17.shop }}</h6>
+                                    <h4 style="position: absolute; left: 0px;bottom: 10px;">{{ item17.price }}</h4>
+                                {% endfor %}
+                                </div>
+                            {% for item18 in data18 %}
+                                <div class="lbt_div_style1">
+                                    <a href="#">
+                                        <img src="{{ item18.img }}" >
+                                    </a>
+                                    <h6>{{ item18.shop }}</h6>
+                                    <h4>{{ item18.price }}</h4>
+                                </div>
+                            {% endfor %}
+                        </div>
+	        			<div class="DIV">
+                            <div style="position: relative">
+                                {% for item19 in data19 %}
+                                    <a href="#">
+                                        <img src="{{ item19.img }}" style="width: 407px;height: 619px" >
+                                    </a>
+                                    <h6 style="position: absolute; left: 0px;bottom: 30px;">{{ item19.shop }}</h6>
+                                    <h4 style="position: absolute; left: 0px;bottom: 10px;">{{ item19.price }}</h4>
+                                {% endfor %}
+                                </div>
+                            {% for item20 in data20 %}
+                                <div class="lbt_div_style1">
+                                    <a href="#">
+                                        <img src="{{ item20.img }}" >
+                                    </a>
+                                    <h6>{{ item20.shop }}</h6>
+                                    <h4>{{ item20.price }}</h4>
+                                </div>
+                            {% endfor %}
+                        </div>
+	        			<div class="DIV">
+                            <div style="position: relative">
+                                {% for item21 in data21 %}
+                                    <a href="#">
+                                        <img src="{{ item21.img }}" style="width: 407px;height: 621px" >
+                                    </a>
+                                    <h6 style="position: absolute; left: 0px;bottom: 30px;">{{ item21.shop }}</h6>
+                                    <h4 style="position: absolute; left: 0px;bottom: 10px;">{{ item21.price }}</h4>
+                                {% endfor %}
+                                </div>
+                            {% for item22 in data22 %}
+                                <div class="lbt_div_style1">
+                                    <a href="#">
+                                        <img src="{{ item22.img }}" >
+                                    </a>
+                                    <h6>{{ item22.shop }}</h6>
+                                    <h4>{{ item22.price }}</h4>
+                                </div>
+                            {% endfor %}
+                        </div>
+	        			<div class="DIV">
+                            <div style="position: relative">
+                                {% for item23 in data23 %}
+                                    <a href="#">
+                                        <img src="{{ item23.img }}" style="width: 407px;height: 623px" >
+                                    </a>
+                                    <h6 style="position: absolute; left: 0px;bottom: 30px;">{{ item23.shop }}</h6>
+                                    <h4 style="position: absolute; left: 0px;bottom: 10px;">{{ item23.price }}</h4>
+                                {% endfor %}
+                                </div>
+                            {% for item24 in data24 %}
+                                <div class="lbt_div_style1">
+                                    <a href="#">
+                                        <img src="{{ item24.img }}" >
+                                    </a>
+                                    <h6>{{ item24.shop }}</h6>
+                                    <h4>{{ item24.price }}</h4>
+                                </div>
+                            {% endfor %}
+                        </div>
         			</div>
         		</div>
         	</div>
@@ -791,5 +1040,5 @@
         		 <p class="copyRight">copyright 2006-2015 yibanmall.com 版权所有 桂ICP备15008717号<img style="width: 18px; height: 18px;" src="{% static 'img/20160919112211.jpg' %}"/><a target="_blank" href="">桂公网安备 45010702000034号</a></p>
         	</div>
         </div>
-	</body>
+    </body>
 </html>

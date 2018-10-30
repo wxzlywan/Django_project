@@ -13,7 +13,7 @@ urlpatterns = [
 
     url(r'^detail/$', views.detail, name='detail'),  # 商品详细页
 
-    url(r'^goodsinfo/$', views.goodsinfo, name='goodsinfo'),
+    # url(r'^$', views.test, name='test'),
 ]
 
 

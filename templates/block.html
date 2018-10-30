@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+{% block new1 %}
+    <div style="position: relative">
+    {% for item23 in data23 %}
+        <a href="#">
+            <img src="{{ item23.img }}" style="width: 407px;height: 623px" >
+        </a>
+        <h6 style="position: absolute; left: 0px;bottom: 30px;">{{ item23.shop }}</h6>
+        <h4 style="position: absolute; left: 0px;bottom: 10px;">{{ item23.price }}</h4>
+    {% endfor %}
+    </div>
+    {% for item24 in data24 %}
+        <div class="lbt_div_style1">
+            <a href="#">
+                <img src="{{ item24.img }}" >
+            </a>
+            <h6>{{ item24.shop }}</h6>
+            <h4>{{ item24.price }}</h4>
+        </div>
+    {% endfor %}
+{% endblock %}

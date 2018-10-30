@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+</head>
+<body>
+
+{#<script src="{% static 'js/LBTX1.js' %}"></script>#}
+
+<div class="LBY">
+{% for brand in brands %}
+    <a href class="m-content-con m-content-wrapy wrapy LBY" style="display: block">
+        <img src="{{ brand }}" >
+    </a>
+{% endfor %}
+</div>
+{#{% for brand in brands %}#}
+{#    {{ brand }}#}
+{#{% endfor %}#}
+
+
+</body>
+</html>

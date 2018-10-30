@@ -1,21 +1,8 @@
 $(function(){
-	$.get("/home/lynn/Desktop/Djang/yibanmall/static/json/warpY.json",function(data){
-		for(var i=0;i<data.length;i++){
-			var obj =data[i];
-			var a1=$("<a href=''></a>");
-			a1.css("display","block");
-			var img=$("<img />");
-			$(img).attr("src",obj.img);		
-			a1.append(img);
-			$(".m-content-con .m-content-wrapy .wrapy-nav .wrapy-photo").append(a1);
-			if(i==0){
-				a1.addClass("wrapy-nav_border")
-			}
-		}
 		var i=0;
 		var index;
-		$(".m-content-con .m-content-wrapy .wrapy-nav .wrapy-photo a").mouseenter(function(){
-			$(this).addClass("wrapy-nav_border").siblings().removeClass("wrapy-nav_border")	
+		$(".m-content-con .m-content-wrapy .wrapy-nav .wrapy-photo").mouseenter(function(){
+			$(this).addClass("wrapy-nav_border").siblings().removeClass("wrapy-nav_border")
 			 index=$(this).index();
 			 clearInterval(timer);
 			$(".wrapy .LBY").stop().animate({"top":-index*538},"slow")
@@ -59,6 +46,4 @@ $(function(){
 			
 		})
 	})
-	
-	
-})
+
