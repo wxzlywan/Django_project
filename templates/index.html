@@ -88,7 +88,7 @@
 			.m-tt a:hover{background: #f02b63; color: white;}
 			.m-content-top .m-mn{width: 1190px; height: 780px; margin-top: 15px;}
 			.m-content-top .m-mn img{width: 290px; height: 290px;}
-			.m-content-top .m-mn ul{width: 1200px; height: auto;}
+			.m-content-top .m-mn ul{width: 1210px; height: auto;}
 			.m-content-top .m-mn li{display: inline-block; border: 5px solid white; height: 380px; width: 290px;}
 			.m-content-top .m-mn h6{font-weight: 400; font-size: 14px;color: #666; font-family: "微软雅黑"; height: 30px;text-overflow: ellipsis;white-space: nowrap; overflow: hidden; padding: 10px 5px;} 
 			.m-content-top .m-mn span{font-size: 20px;color: #F10582; font-weight: 600;}
@@ -183,7 +183,7 @@
 		
 		<script src="{% static 'js/jquery-1.12.3.js' %}"></script>
 		<script src="{% static 'js/jquery.cookie.js' %}"></script>
-{#		<script src="{% static 'js/index.js' %}"></script>#}
+		<script src="{% static 'js/index.js' %}"></script>
 {#		<script src="{% static 'js/shops.js' %}"></script>#}
 		<script src="{% static 'js/warpY.js' %}"></script>
 {#		<script src="{% static 'js/LBTY.js' %}"></script>#}
@@ -487,13 +487,18 @@
         	</div>
         	<div class="m-mn">
         		<ul>
-        			<!--<li>
-        				<a href="#"><img src=""/></a>
-        				<a href="#"></a>
-        				<span></span>
-        				<del></del>
-        				<i></i>
-        			</li>-->
+        			{% for goods in goodsdetail %}
+                        <li>
+                            <a href="#">
+                                <img src="{{ goods.img }}">
+                            </a>
+                            <h6>{{ goods.shop }}</h6>
+                            <span>{{ goods.price }}</span>
+                            <del>{{ goods.old_price }}</del>
+                            <i>{{ goods.discount }}</i>
+                            <label>{{ goods.cart }}</label>
+                        </li>
+                    {% endfor %}
         		</ul>        		        		
         	</div>        	
         </div>
@@ -507,41 +512,38 @@
 	        </div>
 	        <div class="m-content-wrapy">
 	        	<div class="wrapy-nav">
-
-
 	        		<a href="#" class="UP">
 	        			<span class="I-ico" style="font-size: 30px;">&#xe759;</span>
 	        		</a>
-	        		<div class="wrapy-photo">
-                        <div class="LBY">
-                        {% for brand in brands %}
-                            <a href class="m-content-con m-content-wrapy wrapy LBY" style="display: block">
-                                <img src="{{ brand }}" >
-                            </a>
-                        {% endfor %}
-                        </div>
-                        <a href="#" class="UP" style="position: absolute;bottom: 0px; border-bottom: 0px;">
+                    <a href="#" class="UP" style="position: absolute;bottom: 0px; border-bottom: 0px;">
 	        			<span class="I-ico" style="font-size: 30px;">&#xe705;</span>
-	        		</a>
-	        	    </div>
-	        	<div class="wrapy">
-	        		<div class="LBY" >
-
-                        {% for good in goods %}
-                            {% if good == good_one %}
-                                <a href="#" class="m-content-con m-content-wrapy wrapy-nav wrapy-photo wrapy-nav_border" style="display: block" >
-                                <img src="{{ good.img }}">
-                            </a>
+                    </a>
+	        		<div class="wrapy-photo">
+                        {% for brand in brandsList %}
+                            {% if brand == brandFirst.img %}
+                                <a style="display: block" class="wrapy-nav_border" >
+                                    <img src="{{ brand }}" >
+                                </a>
                             {% else %}
-                                <a href="#" class="m-content-con m-content-wrapy wrapy-nav wrapy-photo" style="display: block">
-                                <img src="{{ good.img }}">
-                            </a>
+                                <a href="#" style="display: block;">
+                                    <img src="{{ brand }}" >
+                                </a>
                             {% endif %}
+                        {% endfor %}
+	        	    </div>
+	            </div>
+            <div class="wrapy">
+	        		<div class="LBY" >
+                        {% for good in goodsList %}
+                            <div style="display: block;">
+                                <a href="#">
+                                    <img src="{{ good }}">
+                                </a>
+                            </div>
                         {% endfor %}
 	        		</div>
 	        	</div>
-	        </div>
-        </div>
+            </div>
         <!--新品推荐-->
         <div class="m-content-con1">
         	<div class="m-tt">
@@ -572,15 +574,15 @@
                                     <h4 style="position: absolute; left: 0px;bottom: 10px;">{{ item1.price }}</h4>
                                 {% endfor %}
                                 </div>
-                            {% for item2 in data2 %}
-                                <div class="lbt_div_style1">
-                                    <a href="#">
-                                        <img src="{{ item2.img }}" >
-                                    </a>
-                                    <h6>{{ item2.shop }}</h6>
-                                    <h4>{{ item2.price }}</h4>
-                                </div>
-                            {% endfor %}
+                        {% for item2 in data2 %}
+                            <div class="lbt_div_style1">
+                                <a href="#">
+                                    <img src="{{ item2.img }}" >
+                                </a>
+                                <h6>{{ item2.shop }}</h6>
+                                <h4>{{ item2.price }}</h4>
+                            </div>
+                        {% endfor %}
                         </div>
 	        			<div class="DIV">
                             <div style="position: relative">

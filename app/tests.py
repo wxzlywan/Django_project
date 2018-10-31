@@ -1,3 +1,5 @@
-from django.test import TestCase
-
+from django.shortcuts import render
+from app.models import warpy
 # Create your tests here.
+
+

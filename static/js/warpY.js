@@ -1,7 +1,7 @@
 $(function(){
 		var i=0;
 		var index;
-		$(".m-content-con .m-content-wrapy .wrapy-nav .wrapy-photo").mouseenter(function(){
+		$(".m-content-con .m-content-wrapy .wrapy-nav .wrapy-photo a").mouseenter(function(){
 			$(this).addClass("wrapy-nav_border").siblings().removeClass("wrapy-nav_border")
 			 index=$(this).index();
 			 clearInterval(timer);

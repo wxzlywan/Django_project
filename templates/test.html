@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>测试</title>
+
 </head>
 <body>
+<ul>
+    {% for goods in goodsdetail %}
+        <li style="border-color: white">
+            <a href="#">
+                <img src="{{ goods.img }}">
+            </a>
+            <h6>{{ goods.shop }}</h6>
+            <span>{{ goods.price }}</span>
+            <del>{{ goods.old_price }}</del>
+            <i>{{ goods.discount }}</i>
+            <label>{{ goods.cart }}</label>
+        </li>
+    {% endfor %}
+</ul>
 
-{#<script src="{% static 'js/LBTX1.js' %}"></script>#}
-
-<div class="LBY">
-{% for brand in brands %}
-    <a href class="m-content-con m-content-wrapy wrapy LBY" style="display: block">
-        <img src="{{ brand }}" >
-    </a>
-{% endfor %}
 </div>
-{#{% for brand in brands %}#}
-{#    {{ brand }}#}
-{#{% endfor %}#}
-
-
 </body>
 </html>
