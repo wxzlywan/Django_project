@@ -489,7 +489,7 @@
         		<ul>
         			{% for goods in goodsdetail %}
                         <li>
-                            <a href="#">
+                            <a href="{% url 'app:detail' goods.id %}">
                                 <img src="{{ goods.img }}">
                             </a>
                             <h6>{{ goods.shop }}</h6>

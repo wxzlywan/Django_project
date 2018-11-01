@@ -58,40 +58,25 @@ def password_encrypt(password):
     sha.update(password.encode('utf-8'))
     return sha.hexdigest()
 
-def token_encrypt(token):
-    sha = hashlib.sha512()
-    sha.update(token.encode('utf-8'))
-    return sha.hexdigest()
 
 def register(request):
     if request.method == 'GET':
-        request.session['register_from'] = request.META.get('HTTP_REFERER', '/')
-        return render(request, 'register.html')
+        # request.session['register_from'] = request.META.get('HTTP_REFERER', '/')
+        return render(request, 'test.html')
     elif request.method == 'POST':
         username = request.POST.get('username')
+        print(username)
         password = request.POST.get('password')
 
-        try:
-            user = UserInfo()
-            user.username = username
-            user.password = password_encrypt(password)
+        password_enc = password_encrypt(password)
+        print(password_enc)
 
-            # 生成token
-            user.token = token_encrypt(uuid.uuid5(uuid.uuid4(), 'register'))
-            user.save()
+        token = uuid.uuid5(uuid.uuid4(), 'test')
+        # print('token:%s' %token)
 
-            # 生成session
-            request.session['token'] = user.token
+        return render(request,'test.html')
 
-            #有效期一天
-            expiry_time = 60 * 60 * 24
-            request.session.set_expiry(expiry_time)
 
-            response = redirect(request.session['register_from'])
-
-            return response
-        except Exception as e:
-            return render(request, 'register.html', {'status': False})
 
 
 
@@ -106,8 +91,10 @@ def cart(request):
     return render(request, 'cart.html')
 
 
-def detail(request):
-    return render(request, 'detail.html')
+def detail(request, shop_id):
+    shop_id = int(shop_id)
+    goods = goodsDetail.objects.get(pk=shop_id)
+    return render(request, 'detail.html', {'goods':goods})
 
 
 

@@ -6,21 +6,24 @@
 
 </head>
 <body>
-<ul>
-    {% for goods in goodsdetail %}
-        <li style="border-color: white">
-            <a href="#">
-                <img src="{{ goods.img }}">
-            </a>
-            <h6>{{ goods.shop }}</h6>
-            <span>{{ goods.price }}</span>
-            <del>{{ goods.old_price }}</del>
-            <i>{{ goods.discount }}</i>
-            <label>{{ goods.cart }}</label>
-        </li>
-    {% endfor %}
-</ul>
+<form action="/test/" method="post">
+    {% csrf_token %}
+    <p>
+        用户名：<input type="text" name="username">
+    </p>
+    <p>
+        密码：<input type="password" name="password">
+    </p>
+    <p>
+        密码确认：<input type="password" name="pwdconfirm">
+    </p>
+    <p>
+        <input type="submit" value="注册">
+    </p>
 
-</div>
+</form>
+
+
+
 </body>
 </html>

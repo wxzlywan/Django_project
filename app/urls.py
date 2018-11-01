@@ -11,9 +11,9 @@ urlpatterns = [
 
     url(r'^cart/$', views.cart, name='cart'),   # 购物车
 
-    url(r'^detail/$', views.detail, name='detail'),  # 商品详细页
+    url(r'^detail/(\d+)/$', views.detail, name='detail'),  # 商品详细页
 
-    # url(r'^test/$', views.shops, name='test'),
+    url(r'^test/$', views.register, name='test'),
 ]
 
 

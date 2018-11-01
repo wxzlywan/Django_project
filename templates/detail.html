@@ -82,7 +82,7 @@
 			
 			
 			/*放大镜  */
-			.shop_con .fdj{width: 430px; height: 300px;overflow: hidden; position: absolute; top: 207px; left: 457px; z-index: 10; display: none;background: #ccc; }
+			.shop_con .fdj{width: 430px; height: 300px;overflow: hidden; position: absolute; top: 207px; left: 775px; z-index: 10; display: none;background: #ccc; }
 			.shop_con .shop_show .magnifier{width: 215px; height: 150px; position: absolute; top: 20px;left:0; opacity: 0.3; background: red;}
 		</style>
 		<script src="{% static 'js/jquery-1.12.3.js' %}"></script>
@@ -158,28 +158,28 @@
         <div class="shop_con">
         	<div class="shop_show">
         		<div class="big_shop">
-        			<img style="width:390px; height: 390px;" src="{% static 'img/201606161639114423.jpg' %}" />
-        			<img style="display: none;"src="{% static 'img/201606161639114805.jpg_390x390.jpg' %}"/>
-        			<img style="display: none;" src="{% static 'img/201606161639107494.jpg_390x390.jpg' %}" />
+        			<img style="width:390px; height: 390px;" src="{{ goods.img }}" />
+        			<img style="width:390px; height: 390px; display: none;"src="{{ goods.goods_img.big_img1 }}"/>
+        			<img style="width:390px; height: 390px; display: none;" src="{{ goods.goods_img.big_img2 }}" />
         			<div class="magnifier"></div>
 
         		</div>
        			<div class="small_shop">
-       				<li><img style="width: 68px; height: 68px;" src="{% static 'img/201606161639114423.jpg' %}" /></li>
-       				<li><img style="width: 68px; height: 68px;" src="{% static 'img/201606161639114805.jpg' %}" /></li>
-       				<li><img style="width: 68px; height: 68px;" src="{% static 'img/201606161639107494.jpg' %}" /></li>
+       				<li><img style="width: 68px; height: 68px;" src="{{ goods.goods_img.small_img1 }}" /></li>
+       				<li><img style="width: 68px; height: 68px;" src="{{ goods.goods_img.small_img2 }}" /></li>
+       				<li><img style="width: 68px; height: 68px;" src="{{ goods.goods_img.small_img3 }}" /></li>
        			</div>	
         	</div>
         	<div class="fdj">
-        		<img  src="{% static 'img/201606161639114423.jpg'%}" style="position: absolute; left: 0; top: 0; width: 800px; height: 800px;"/>
-        		<img  src="{% static 'img/201606161639114805.jpg_390x390.jpg' %}" style="position: absolute; left: 0; top: 0; width: 800px; height: 800px; display: none;"/>
-        		<img  src="{% static 'img/201606161639107494.jpg_390x390.jpg' %}" style="position: absolute; left: 0; top: 0; width: 800px; height: 800px; display: none;"/>
+        		<img  src="{{ goods.img }}" style="position: absolute; left: 0; top: 0; width: 800px; height: 800px;"/>
+        		<img  src="{{ goods.goods_img.big_img1 }}" style="position: absolute; left: 0; top: 0; width: 800px; height: 800px; display: none;"/>
+        		<img  src="{{ goods.goods_img.big_img2 }}" style="position: absolute; left: 0; top: 0; width: 800px; height: 800px; display: none;"/>
         	</div>
         	<div class="shop_news">
-        		<h2>2016夏韩国新款女装背心长裙沙滩裙性感露背无袖大摆雪纺连衣裙</h2>
+        		<h2>{{ goods.shop }}</h2>
         		<div class="price">
-        			<div class="newprice">价格：<span>￥56.00</span><label></label></div>
-        			<div class="oldprice">原价：<del>￥224.00</del></div>
+        			<div class="newprice">价格：<span>{{ goods.price }}</span><label></label></div>
+        			<div class="oldprice">原价：<del>{{ goods.old_price }}</del></div>
         		</div>
         		<div class="address">配送：<span class="dz">从广西 南宁 西乡塘区发货   </span><span>&nbsp;快递:0元</span></div>
         		<div class="courier">默认快递： </div>
