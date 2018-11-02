@@ -34,7 +34,7 @@ class goods_img(models.Model):
 
 class UserInfo(models.Model):
     username = models.CharField(max_length=60)
-    password = models.CharField(max_length=60)
+    password = models.CharField(max_length=256)
     portrait = models.CharField(max_length=256)
     token = models.CharField(max_length=256)
 

@@ -111,7 +111,7 @@
 	</head>
 	<body>
 		<div class="g-hd">
-			<a href="#" class="m-hdl"><img src="{% static 'img/loadlogo.png' %}" alt="衣扮网-logo"></a>
+			<a href="{% url 'app:index' %}" class="m-hdl"><img src="{% static 'img/loadlogo.png' %}" alt="衣扮网-logo"></a>
 			<div class="m-hdr">
 				<a href="{% url 'app:index' %}">首页</a>|
 				<a href="{% url 'app:register' %}">注册</a>|
@@ -151,7 +151,7 @@
 							<li>
 								<input type="button" name="button" id="J_submit" class="login-btn"  value="登  录"/>
 							</li>
-							<li style="color: white; margin-bottom: 10px;">还没有账号？<a href="register.html" class="reg">立即注册</a></li>
+							<li style="color: white; margin-bottom: 10px;">还没有账号？<a href="{% url 'app:register' %}" class="reg">立即注册</a></li>
 							
 						</ul>
 					</form>

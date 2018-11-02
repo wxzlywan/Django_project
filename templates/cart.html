@@ -58,7 +58,7 @@
             <div id="j_topbar" class="m-topbar f-cb">
             	<div class="g-top">
             		<div class="g-topL">
-	            		<a href="index.html" class="indexs">
+	            		<a href="{% url 'app:index' %}" class="indexs">
 	            			<span class="I-ico" style="color: #f10582;">&#xe73d;</span> 衣扮网首页	
 	            		</a>
 	            		<a href="{% url 'app:login' %}" class="land">
@@ -85,7 +85,7 @@
             <div class="hd">
             	<!--搜索栏-->
             	<div class="top">
-            		<div class="logo"><a href="index.html" target="_blank"><img src="{% static 'img/logo.png' %}"/></a></div>
+            		<div class="logo"><a href="{% url 'app:index' %}" target="_blank"><img src="{% static 'img/logo.png' %}"/></a></div>
             		<div class="top-sch">
             			<div class="form-box">
             				<form style="position: relative;">
@@ -106,7 +106,7 @@
             	</div>
             	<div class="shop_m-nav">
             		<ul class="top_nav">
-            			<li><a href="index.html">首页</a></li>
+            			<li><a href="{% url 'app:index' %}">首页</a></li>
             			<li><a href="">女装特卖</a></li>
             			<li><a href="">男装特卖</a></li>
             			<li><a href="">童装特卖</a></li>

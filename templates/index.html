@@ -30,7 +30,7 @@
 			li{list-style-type: none;}
 			#j_topbar{width: 1263px; height:30px;background: #F9F9F9;}
 			#j_topbar .g-top{width: 1190px; line-height: 30px; margin: 0px 36.5px;}
-			.g-topL{width: 191px; height: 30px; float: left;}
+			.g-topL{width: 300px; height: 30px; float: left;}
 			.indexs,.land,.register{color: #666}
 			.g-topR{width: 404px; height: 30px; float: right;}
 			.g-topR a{ color: #666;}
@@ -94,7 +94,7 @@
 			.m-content-top .m-mn span{font-size: 20px;color: #F10582; font-weight: 600;}
 			.m-content-top .m-mn del{ margin-left: 10px;}
 			.m-content-top .m-mn i{margin-left: 10px;padding: 1px 10px;background-color: #f10582;color: #fff;}
-			.m-content-top .m-mn label {margin-left: 10px;padding: 1px 7px;background-color: hotpink;color: #fff; cursor: pointer;}
+			.m-content-top .m-mn label {margin-left: 5px;padding: 1px 5px;background-color: hotpink;color: #fff; cursor: pointer;}
 			
 			/*内容部分的第一轮播图---品牌折扣*/
 			.m-content-con{width: 1190px; height: auto; margin: 25px 36.5px 0px 36.5px; }
@@ -177,7 +177,11 @@
 			.g-ft .ft .ft-nav dl .yl a{display: inline-block; width: 45%; line-height: 26px;}
 			.g-ft .m-ft .copyRight{color: white; text-align: center;}
 			.g-ft .m-ft .copyRight a{color: white;}
-			
+
+
+            .mine{color: red; margin-left: 10px;}
+            .logout{margin-left: 10px}
+
 			
 		</style>
 		
@@ -201,15 +205,21 @@
             <div id="j_topbar" class="m-topbar f-cb">
             	<div class="g-top">
             		<div class="g-topL">
-	            		<a href="index.html" class="indexs">
+	            		<a href="{% url 'app:index' %}" class="indexs">
 	            			<span class="I-ico" style="color: #f10582;">&#xe73d;</span> 衣扮网首页	
 	            		</a>
-	            		<a href="{% url 'app:login' %}" class="land">
+                        {% if userInfo %}
+                            <a href="#" class="mine">我的账户： {{ userInfo.username }}</a>
+                            <a href="#" class="logout">退出</a>
+                        {% else %}
+                            <a href="{% url 'app:login' %}" class="land">
 	            			[登录]
-	            		</a>
-	            		<a href="{% url 'app:register' %}" class="register">
-	            			[免费注册]
-	            		</a>
+	            		    </a>
+                            <a href="{% url 'app:register' %}" class="register">
+                                [免费注册]
+                            </a>
+                        {% endif %}
+
             		</div>          	            		
             		<div class="g-topR">
             			<a href="#" target="_blank" style="color: #f10582;">下载app&nbsp;</a>
@@ -230,7 +240,7 @@
             <div class="hd">
             	<!--搜索栏-->
             	<div class="top">
-            		<div class="logo"><a href="index.html" target="_blank"><img src="{% static 'img/logo.png' %}"/></a></div>
+            		<div class="logo"><a href="{% url 'app:index' %}" target="_blank"><img src="{% static 'img/logo.png' %}"/></a></div>
             		<div class="top-sch">
             			<div class="form-box">
             				<form style="position: relative;">
