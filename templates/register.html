@@ -287,29 +287,30 @@
 							用户名:
 						</span>
                     <input value="" type="text" name="username" class="text_form" id="account"/>
-                    <span id="usererr" class="TS">由6-50位字符，支持英文字母、数字及“-”组合。</span>
+                    <span id="userErr" class="TS">由6-50位字符，支持英文字母、数字及“-”组合。</span>
                 </li>
                 <li>
 						<span class="BT">
 							<label>*</label>
 							登陆密码:
 						</span>
-                    <input value="" type="password" name="password" class="password_form"/>
-                    <span id="PassWord" class="TS">密码为6-20个字符，请用英文加数字或下划线组合！</span>
-                    {#						<div class="password_style">#}
-                    {#							安全程度:#}
-                    {#							<span>弱</span>#}
-                    {#							<span>中</span>#}
-                    {#							<span>强</span>#}
-                    {#						</div>#}
+                    <input value="" type="password" name="password" class="password_form" id="PassWord"/>
+                    <span id="pwdErr" class="TS">密码为6-20个字符，请用英文加数字或下划线组合！</span>
+                    <div class="password_style">
+                        安全程度:
+                        <span>弱</span>
+                        <span>中</span>
+                        <span>强</span>
+                    </div>
                 </li>
                 <li>
 						<span class="BT">
 							<label>*</label>
 							确认密码:
 						</span>
-                    <input value="" type="password" name="passwordconfirm" class="ispassword_form"/>
-                    <span id="IsPassWord" class="TS">请再次输入密码。</span>
+                    <input value="" type="password" name="passwordconfirm" class="ispassword_form"
+                           id="passwordconfirm"/>
+                    <span id="pwdcErr" class="TS">请再次输入密码。</span>
                 </li>
                 <li>
                     {#						<span class="BT">#}

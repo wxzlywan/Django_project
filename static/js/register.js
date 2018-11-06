@@ -1,26 +1,72 @@
+// 账号验证
+
 $('#account').blur(function () {
     $.get('/userinfocheck/',{
         'username': $(this).val()
         },
         function(response){
-            // console.log(response)
+            console.log(response)
             if (response['statusid'] == '0'){
-                $('#usererr').html(response['msg']).css('color','red')
+                $('#userErr').html(response['msg']).css('color','red')
             }
             else if (response['statusid'] == '-1'){
-                $('#usererr').html(response['msg']).css('color', 'red')
+                $('#userErr').html(response['msg']).css('color', 'red')
             }
             else if (response['statusid'] == '-2'){
-                $('#usererr').html(response['msg']).css('color', 'red')
+                $('#userErr').html(response['msg']).css('color', 'red')
             }
             else if (response['statusid'] == '-3'){
-                $('#usererr').html(response['msg']).css('color', 'red')
+                $('#userErr').html(response['msg']).css('color', 'red')
             }
             else if (response['statusid'] == '1'){
-                $('#usererr').html(response['msg']).css('color','green')
+                $('#userErr').html(response['msg']).css('color','green')
             }
-    })
+    });
+});
+
+// 密码验证
+
+$('#PassWord').blur(function () {
+    var password = $(this).val()
+    var reg = /[^a-zA-Z0-9_]+/
+    if (password == '') {
+        $('#pwdErr').html('密码不可以为空!').css('color','red')
+    }
+    else if (password.length <6 || password.length >20){
+        $('#pwdErr').html('密码长度需要为6~20个字符!').css('color','red')
+    }
+    else if (reg.test(password)){
+        $('#pwdErr').html('请用英文加数字或下划线组合!').css('color','red')
+    }
+    else{
+        $('#pwdErr').html('密码正确!').css('color','green')
+    }
+
 })
+
+// 确认密码验证
+$('#passwordconfirm').blur(function () {
+    var passwordconfirm = $(this).val()
+    var password = $('#PassWord').val()
+    var reg = /[^a-zA-Z0-9_]+/
+    if (passwordconfirm == '') {
+        $('#pwdcErr').html('密码不可以为空!').css('color','red')
+    }
+    else if (passwordconfirm.length <6 || passwordconfirm.length >20){
+        $('#pwdcErr').html('密码长度需要为6~20个字符!').css('color','red')
+    }
+    else if (reg.test(passwordconfirm)){
+        $('#pwdcErr').html('请用英文加数字或下划线组合!').css('color','red')
+    }
+    else if (passwordconfirm != password) {
+        $('#pwdcErr').html('输入的密码不一致').css('color','red')
+    }
+    else{
+        $('#pwdcErr').html('密码正确!').css('color','green')
+    }
+})
+
+
 
 
 

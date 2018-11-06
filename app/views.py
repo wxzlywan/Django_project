@@ -11,10 +11,11 @@ from app.models import lbtx1, lbty, warpy, goodsDetail, UserInfo
 # Create your views here.
 def index(request):
     # 获取token
-    token = request.session.get('token')
 
+    token = request.session.get('token')
     if token:
-        userInfo = UserInfo.objects.get(token=token)
+        userInfo = UserInfo.objects.get(token=token)[0]
+
 
 
 
@@ -94,7 +95,7 @@ def index(request):
         'goodsList':goodsList,
         'goodsdetail':goodsdetail,
 
-        'userInfo':userInfo,
+        'userInfo': userInfo,
     }
 
     return render(request, 'index.html', data)
@@ -102,7 +103,7 @@ def index(request):
 
 # 密码加密
 def password_encrypt(password):
-    sha = hashlib.sha512()
+    sha = hashlib.sha224()
     sha.update(password.encode('utf-8'))
     return sha.hexdigest()
 
@@ -141,13 +142,13 @@ def userinfocheck(request):
         except:
             if len(username)<5 or len(username)>60:
                 return JsonResponse({'msg': '用户名长度需要为6~50位字符', 'statusid': '-2'})
-            elif  re.search(r'[^a-zA-Z0-9_]+', username):
+            elif re.search(r'[^a-zA-Z0-9_]+', username):
                 return JsonResponse({'msg':'只支持英文字母、数字及“_”组合', 'statusid': '-3'})
             else:
                 return JsonResponse({'msg':'用户名可以使用！', 'statusid': '1'})
 
 
-# 密码验证
+
 
 
 def login(request):
@@ -159,6 +160,8 @@ def cart(request):
     return render(request, 'cart.html')
 
 
+
+# 详情页
 def detail(request, shop_id):
     shop_id = int(shop_id)
     goods = goodsDetail.objects.get(pk=shop_id)

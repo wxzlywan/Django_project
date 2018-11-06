@@ -13,7 +13,8 @@ urlpatterns = [
 
     url(r'^detail/(\d+)/$', views.detail, name='detail'),  # 商品详细页
 
-    url(r'^userinfocheck/$', views.userinfocheck, name='userinfocheck')   # 验证用户名
+    url(r'^userinfocheck/$', views.userinfocheck, name='userinfocheck'),   # 验证用户名
+
 ]
 
 
