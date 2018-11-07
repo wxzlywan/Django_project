@@ -28,7 +28,7 @@
 			/*头部（g-hd）部分*/
 			#j_topbar{width: 1263px; height:30px;background: #F9F9F9;}
 			#j_topbar .g-top{width: 1190px; line-height: 30px; margin: 0px 36.5px;}
-			.g-topL{width: 191px; height: 30px; float: left;}
+			.g-topL{width: 300px; height: 30px; float: left;}
 			.indexs,.land,.register{color: #666}
 			.g-topR{width: 404px; height: 30px; float: right;}
 			.g-topR a{ color: #666;}
@@ -84,6 +84,9 @@
 			/*放大镜  */
 			.shop_con .fdj{width: 430px; height: 300px;overflow: hidden; position: absolute; top: 207px; left: 775px; z-index: 10; display: none;background: #ccc; }
 			.shop_con .shop_show .magnifier{width: 215px; height: 150px; position: absolute; top: 20px;left:0; opacity: 0.3; background: red;}
+
+            .mine{color: red; margin-left: 10px;}
+            .logout{margin-left: 10px}
 		</style>
 		<script src="{% static 'js/jquery-1.12.3.js' %}"></script>
 		<script src="{% static 'js/shop.js' %}"></script>
@@ -97,12 +100,17 @@
 	            		<a href="{% url 'app:index' %}" class="indexs">
 	            			<span class="I-ico" style="color: #f10582;">&#xe73d;</span> 衣扮网首页	
 	            		</a>
-	            		<a href="{% url 'app:login' %}" class="land">
-	            			[登录]
-	            		</a>
-	            		<a href="{% url 'app:register' %}" class="register">
-	            			[免费注册]
-	            		</a>
+	            		{% if username %}
+                            <a href="#" class="mine">我的账户： {{ username }}</a>
+                            <a href="{% url 'app:logout' %}" class="logout">{{ logout }}</a>
+                        {% else %}
+                            <a href="{% url 'app:login' %}" class="land">
+	            			{{ login }}
+	            		    </a>
+                            <a href="{% url 'app:register' %}" class="register">
+                            {{ register }}
+                            </a>
+                        {% endif %}
             		</div>          	            		
             		<div class="g-topR">
             			<a href="#" target="_blank" style="color: #f10582;">下载app&nbsp;</a>

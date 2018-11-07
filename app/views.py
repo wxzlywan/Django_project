@@ -1,7 +1,10 @@
 import hashlib
+import io
+import random
 import re
 import uuid
 
+from PIL import Image, ImageDraw, ImageFont
 from django.shortcuts import render, redirect
 from django.http import JsonResponse, HttpResponse
 
@@ -10,14 +13,6 @@ from app.models import lbtx1, lbty, warpy, goodsDetail, UserInfo
 
 # Create your views here.
 def index(request):
-    # 获取token
-
-    token = request.session.get('token')
-    if token:
-        userInfo = UserInfo.objects.get(token=token)[0]
-
-
-
 
     # 新品推荐(女)
     lbtx1_list1 = lbtx1.objects.filter(pk=1)
@@ -95,10 +90,18 @@ def index(request):
         'goodsList':goodsList,
         'goodsdetail':goodsdetail,
 
-        'userInfo': userInfo,
     }
+    token = request.session.get('token')
+    if token:
+        user = UserInfo.objects.get(token=token)
+        data['username'] = user.username
+        data['logout'] = '退出'
+    else:
+        data['login'] = '[登录]'
+        data['register'] = '[免费注册]'
 
     return render(request, 'index.html', data)
+
 
 
 # 密码加密
@@ -152,8 +155,24 @@ def userinfocheck(request):
 
 
 def login(request):
+    if request.method == 'GET':
+        return render(request, 'login.html')
+    elif request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        try:
+            user = UserInfo.objects.get(username=username)
+            if user.password == password_encrypt(password):  # 登录成功
 
-    return render(request, 'login.html')
+                # 更新token
+                user.token = str(uuid.uuid5(uuid.uuid4(), 'login'))
+                user.save()
+                request.session['token'] = user.token
+                return redirect('app:index')
+            else:  # 登录失败
+                return render(request, 'login.html', context={'passwdErr': '密码错误!', 'statusid': '-1'})
+        except:
+            return render(request, 'login.html', context={'acountErr': '账号不存在!', 'statusid': '-1'})
 
 
 def cart(request):
@@ -163,10 +182,82 @@ def cart(request):
 
 # 详情页
 def detail(request, shop_id):
+    data = {}
+
     shop_id = int(shop_id)
     goods = goodsDetail.objects.get(pk=shop_id)
-    return render(request, 'detail.html', {'goods':goods})
+    data['goods'] =goods
+
+    token = request.session.get('token')
+    if token:
+        user = UserInfo.objects.get(token=token)
+        data['username'] = user.username
+        data['logout'] = '退出'
+    else:
+        data['login'] = '[登录]'
+        data['register'] = '[免费注册]'
+
+    return render(request, 'detail.html', data)
 
 
+# 验证码生成
+def codeVerify(request):
+
+    bgcolor = (random.randrange(20,100),random.randrange(20,100),random.randrange(20,100))
+    width = 100
+    height = 40
+
+    image  = Image.new('RGB',(width,height),bgcolor)
+
+    draw = ImageDraw.Draw(image)
+
+    for i in range(0,100):
+        xy = (random.randrange(0,width),random.randrange(0,height))
+        fill =  (random.randrange(255),random.randrange(255),random.randrange(255))
+        draw.point(xy,fill)
+
+    str1 = '1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'
+
+    rand_str = ''
+    for i in range(4):
+        rand_str += str1[random.randrange(len(str1))]
 
 
+    font = ImageFont.truetype('static/others/Fangsong.ttf',40)
+
+    fontcolor1 = (random.randrange(255), random.randrange(255), random.randrange(255))
+    fontcolor2 = (random.randrange(255), random.randrange(255), random.randrange(255))
+    fontcolor3 = (random.randrange(255), random.randrange(255), random.randrange(255))
+    fontcolor4 = (random.randrange(255), random.randrange(255), random.randrange(255))
+
+    draw.text((5, 2), rand_str[0], font=font, fill=fontcolor1)
+    draw.text((25, 2), rand_str[1], font=font, fill=fontcolor2)
+    draw.text((50, 2), rand_str[2], font=font, fill=fontcolor3)
+    draw.text((75, 2), rand_str[3], font=font, fill=fontcolor4)
+
+    del draw
+
+    request.session['verify'] = rand_str
+
+    buff = io.BytesIO()
+
+    image.save(buff, 'png')
+
+    return HttpResponse(buff.getvalue(),'image/png')
+
+
+def codeVerifyCheck(request):
+    code1 = request.GET.get('codeVerify')
+    print(code1)
+    code2 = request.session['verify']
+    print(code2)
+
+    if code1 == code2:
+        return JsonResponse({'msg':'验证码正确！','statusid':'1'})
+    else:
+        return JsonResponse({'msg':'验证码输入错误,请区分大小写!', 'statusid':'-1'})
+
+
+def logout(request):
+    request.session.flush()
+    return redirect('app:index')

@@ -208,15 +208,15 @@
 	            		<a href="{% url 'app:index' %}" class="indexs">
 	            			<span class="I-ico" style="color: #f10582;">&#xe73d;</span> 衣扮网首页	
 	            		</a>
-                        {% if userInfo %}
-                            <a href="#" class="mine">我的账户： {{ userInfo.username }}</a>
-                            <a href="#" class="logout">退出</a>
+                        {% if username %}
+                            <a href="#" class="mine">我的账户： {{ username }}</a>
+                            <a href="{% url 'app:logout' %}" class="logout">{{ logout }}</a>
                         {% else %}
                             <a href="{% url 'app:login' %}" class="land">
-	            			[登录]
+	            			{{ login }}
 	            		    </a>
                             <a href="{% url 'app:register' %}" class="register">
-                                [免费注册]
+                            {{ register }}
                             </a>
                         {% endif %}
 

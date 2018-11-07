@@ -114,6 +114,8 @@
         .g-mn .m-form li {
             margin-top: 10px;
             padding: 7px 0px;
+            position: relative;
+
         }
 
         .g-mn .m-form li .BT {
@@ -191,6 +193,8 @@
             color: #fff;
             border-radius: 3px;
             cursor: pointer;
+            line-height: 36px;
+            text-align: center;
         }
 
         .g-mn-right h3 {
@@ -248,6 +252,14 @@
         .g-ft .g-ft-wrap .g-ft-nav a {
             color: #666;
         }
+
+        #idcode{
+            position: relative;
+            top:14px;
+            margin-left: 10px;
+
+
+        }
     </style>
     <script src="{% static 'js/jquery-1.12.3.js' %}"></script>
     <script src="{% static 'js/jquery.cookie.js' %}"></script>
@@ -262,7 +274,7 @@
         </a>
     </div>
 </div>
-<form action="/register/" method="post">
+<form action="/register/" method="post" id="registerform">
     {% csrf_token %}
     <div class="g-mn">
         <div class="g-mn-left">
@@ -282,53 +294,41 @@
             </ul>
             <ul class="m-form">
                 <li>
-						<span class="BT">
-							<label>*</label>
-							用户名:
-						</span>
-                    <input value="" type="text" name="username" class="text_form" id="account"/>
+                    <span class="BT">
+                        <label>*</label>用户名:
+                    </span>
+                    <input value="" type="text" name="username" class="text_form" id="account" required/>
                     <span id="userErr" class="TS">由6-50位字符，支持英文字母、数字及“-”组合。</span>
                 </li>
                 <li>
-						<span class="BT">
-							<label>*</label>
-							登陆密码:
-						</span>
-                    <input value="" type="password" name="password" class="password_form" id="PassWord"/>
+                    <span class="BT">
+                        <label>*</label>登陆密码:
+                    </span>
+                    <input value="" type="password" name="password" class="password_form" id="PassWord" required/>
                     <span id="pwdErr" class="TS">密码为6-20个字符，请用英文加数字或下划线组合！</span>
-                    <div class="password_style">
-                        安全程度:
-                        <span>弱</span>
-                        <span>中</span>
-                        <span>强</span>
-                    </div>
                 </li>
                 <li>
-						<span class="BT">
-							<label>*</label>
-							确认密码:
-						</span>
-                    <input value="" type="password" name="passwordconfirm" class="ispassword_form"
-                           id="passwordconfirm"/>
+                    <span class="BT">
+                        <label>*</label>确认密码:
+                    </span>
+                    <input value="" type="password" name="passwordconfirm" class="ispassword_form" id="passwordconfirm" required/>
                     <span id="pwdcErr" class="TS">请再次输入密码。</span>
                 </li>
                 <li>
-                    {#						<span class="BT">#}
-                    {#							<label>*</label>#}
-                    {#							验证码:#}
-                    {#						</span>#}
-                    <!--<input value="" type="text" name="username" class="Captcha_form" /><span id="idcode"></span>-->
-                    {#						<input type="text" id ="Txtidcode" class ="Captcha_form"><span id="idcode"></span>#}
+                    <span class="BT">
+                        <label>*</label>验证码:
+                    </span>
+                    <input type="text" id="Txtidcode" class="Captcha_form" name="codeVerify" required><img src="/codeVerify/" alt="" id="idcode" >
 
-                    {#						<span class="TS">请输入验证码，区分大小写!</span>#}
-                    {#					</li>#}
+                    <span class="TS" id="codeErr">请输入验证码，区分大小写!</span>
+                </li>
                 <li class="XieYi">
-                    <input type="checkbox" class="pl"/>
+                    <input type="checkbox" class="pl" checked required/>
                     我已仔细阅读并同意接受
                     <a href="">《用户使用协议》</a>
                 </li>
                 <li class="XieYi">
-                    <input type="submit" class="Register" value="立即注册"/>
+                    <div class="Register" id="subButton">立即注册</div>
                 </li>
             </ul>
         </div>
