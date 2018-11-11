@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/addcartsuccess.css' %}">
+
+</head>
+<body>
+<div class="g-hd">
+    <!--头部公共部分-->
+    <div id="j_topbar" class="m-topbar f-cb">
+        <div class="g-top">
+            <div class="g-topL">
+                <a href="{% url 'app:index' %}" class="indexs">
+                    <span class="I-ico" style="color: #f10582;">&#xe73d;</span> 衣扮网首页
+                </a>
+                {% if user.username %}
+                    <a href="#" class="mine">我的账户： {{ user.username }}</a>
+                    <a href="{% url 'app:logout' %}" class="logout">[退出]</a>
+                {% else %}
+                    <a href="{% url 'app:login' %}" class="land">
+                        [登录]
+                    </a>
+                    <a href="{% url 'app:register' %}" class="register">
+                        [注册]
+                    </a>
+                {% endif %}
+            </div>
+            <div class="g-topR">
+                <a href="#" target="_blank" style="color: #f10582;">下载app&nbsp;</a>
+                <a href="#" target="_blank">我的订单</a> <i>|</i>
+                <a href="{% url 'app:cart' %}" target="_blank">
+                    <span class="I-ico" style="color: #f10582;">&#xe95f;</span>购物车0件
+                </a> <i>|</i>
+                <a href="#" target="_blank">
+                    <span class="I-ico" style="color: gold;">&#xeaaa;</span>收藏夹
+                </a> <i>|</i>
+                <a href="#" target="_blank">互联支付</a> <i>|</i>
+                <a href="#" target="_blank">帮助中心</a>
+            </div>
+        </div>
+    </div>
+    <div class="hd">
+        <!--搜索栏-->
+        <div class="top">
+            <div class="logo"><a href="{% url 'app:index' %}" target="_blank"><img
+                    src="{% static 'img/logo.png' %}"/></a></div>
+            <div class="top-sch">
+                <div class="form-box">
+                    <form style="position: relative;">
+                        <span class="I-ico" style="position: absolute; top: 10px; left: 5px;">&#xe679;</span>
+                        <input type="text" class="u-sch-text" placeholder="请输入您要搜的商品关键字！"/>
+                        <input type="submit" class="u-sch-btn" value="搜 索"/>
+                    </form>
+                </div>
+                <div class="sch-keywords">
+                    <span>热门搜索：</span>
+                    <a href="#">连衣裙&nbsp;</a>
+                    <a href="#">T桖&nbsp;</a>
+                    <a href="#">POLO衫&nbsp;</a>
+                    <a href="#">短裙&nbsp;</a>
+                    <a href="#">半短裙&nbsp;</a>
+                </div>
+            </div>
+        </div>
+        <div class="shop_m-nav">
+            <ul class="top_nav">
+                <li><a href="{% url 'app:index' %}">首页</a></li>
+                <li><a href="">女装特卖</a></li>
+                <li><a href="">男装特卖</a></li>
+                <li><a href="">童装特卖</a></li>
+                <li><a href="">内衣特卖</a></li>
+                <li><a href=""><span class="I-ico">&#xe6e0;</span> 限时特卖</a></li>
+                <li><a href="">明星穿搭秘籍</a></li>
+                <li><a href="">美衣盒子</a><img style="position: absolute; left: 800px; top: 120px;"
+                                            src="{% static 'img/hot.gif' %}"/></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<div class="cart_content">
+    <div class="content-left">
+        <div class="success-msg">
+            <img src="{% static 'img/ticket.jpg' %}" alt="">
+            <span>商品已成功加入购物车</span>
+        </div>
+        <div class="good-detail">
+            <div class="good-img">
+                <img src="{{ goods.img }}" alt="">
+            </div>
+            <div class="good-intro">
+                <div class="good-name">{{ goods.shop }}</div>
+                <div class="good-param">
+                    <div>颜色：{{ cart.color }}</div>
+                    <div>尺码：{{ cart.size }}</div>
+                    <div>数量：{{ cart.number }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-right">
+        <div class="to-cart">
+            <a href="{% url 'app:cart' %}" >去购物车结算 &nbsp;></a>
+        </div>
+        <div class="to-detail">
+            <a href="{% url 'app:detail' goods.id %}" >< &nbsp;查看商品详情</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

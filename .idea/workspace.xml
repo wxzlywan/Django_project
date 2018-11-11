@@ -2,14 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c85a53c-e8f0-45a1-9863-72e107c8f449" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e9339a12-892b-4e68-8a9c-2c95404ae40e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e9339a12-892b-4e68-8a9c-2c95404ae40e.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/yibanmall.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/yibanmall.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0002_lbty.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0003_warpy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0004_goodsdetail.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0005_userinfo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0006_goods_img.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0007_auto_20181102_0931.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/global.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/index2016.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/201606281405385445_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/201606281405385445_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/201606281405385445_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/201606281405385445_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/201606281422478849_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/201606281422478849_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/201606281422478849_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/201606281422478849_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/201606281656456293_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/201606281656456293_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/201606281656456293_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/201606281656456293_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/201607061357388108_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/201607061357388108_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/201607061357388108_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/201607061357388108_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/201607111002315056_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/201607111002315056_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/201607111002315056_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/201607111002315056_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/201607271454072825_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/201607271454072825_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/201607271454072825_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/201607271454072825_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/LBTX1.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/LBTX1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/shops.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/block.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/block.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yibanmall/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/yibanmall/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yibanmall/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/yibanmall/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yibanmall/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/yibanmall/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yibanmall/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/yibanmall/wsgi.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -128,57 +168,63 @@
     <session id="-1259328340">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.22" value="2" />
-          <entry key="project.open.time.23" value="3" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.22" value="3" />
+          <entry key="project.open.time.23" value="4" />
           <entry key="project.open.time.24" value="1" />
-          <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.26" value="2" />
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="app_goods_img" value="4" />
-          <entry key="app_goodsdetail" value="8" />
+          <entry key="app_cart" value="9" />
+          <entry key="app_goods_img" value="7" />
+          <entry key="app_goodsdetail" value="14" />
           <entry key="app_userinfo" value="9" />
           <entry key="auth_user" value="1" />
-          <entry key="css" value="1" />
-          <entry key="html" value="34" />
-          <entry key="js" value="12" />
+          <entry key="css" value="7" />
+          <entry key="django_migrations" value="2" />
+          <entry key="html" value="54" />
+          <entry key="js" value="24" />
           <entry key="json" value="2" />
-          <entry key="py" value="20" />
-          <entry key="txt" value="2" />
+          <entry key="py" value="31" />
+          <entry key="txt" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="1" />
-          <entry key="Database Element" value="22" />
-          <entry key="HTML" value="34" />
+          <entry key="CSS" value="7" />
+          <entry key="Database Element" value="42" />
+          <entry key="HTML" value="54" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="12" />
-          <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="20" />
+          <entry key="JavaScript" value="24" />
+          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="Python" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cell" value="35" />
-          <entry key="html" value="1226" />
-          <entry key="js" value="1604" />
-          <entry key="py" value="4297" />
+          <entry key="css" value="1368" />
+          <entry key="html" value="3625" />
+          <entry key="js" value="5097" />
+          <entry key="py" value="6788" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1226" />
-          <entry key="JavaScript" value="1604" />
-          <entry key="Python" value="4297" />
+          <entry key="CSS" value="1368" />
+          <entry key="HTML" value="3625" />
+          <entry key="JavaScript" value="5097" />
+          <entry key="Python" value="6788" />
           <entry key="Scratch" value="35" />
         </counts>
       </usages-collector>
@@ -188,28 +234,14 @@
     <favorites_list name="yibanmall" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.46998063">
+    <splitter split-orientation="horizontal" split-proportion="0.48935038">
       <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+        <leaf>
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="106">
-                  <caret line="160" column="47" selection-start-line="160" selection-start-column="47" selection-end-line="160" selection-end-column="47" />
-                  <folding>
-                    <element signature="e#0#14#0" expanded="true" />
-                    <marker date="1541583819374" expanded="true" signature="4587:4591" ph="..." />
-                    <marker date="1541583819374" expanded="true" signature="4610:5428" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/urls.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="95">
-                  <caret line="7" column="16" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="16" />
+                <state relative-caret-position="221">
+                  <caret line="350" column="4" selection-start-line="350" selection-start-column="4" selection-end-line="353" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
@@ -218,14 +250,38 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/templates/login.html">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/static/css/cart.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="459">
-                  <caret line="186" column="6" lean-forward="true" selection-start-line="186" selection-start-column="6" selection-end-line="186" selection-end-column="6" />
-                  <folding>
-                    <element signature="n#style#0;n#span#0;n#li#3;n#ul#0;n#form#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
+                <state relative-caret-position="-12">
+                  <caret line="432" column="9" selection-start-line="432" selection-start-column="9" selection-end-line="432" selection-end-column="9" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/static/js/cart.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="294">
+                  <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/urls.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="589">
+                  <caret line="31" column="21" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="21" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/cart.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="351">
+                  <caret line="122" column="77" selection-start-line="122" selection-start-column="77" selection-end-line="122" selection-end-column="77" />
                 </state>
               </provider>
             </entry>
@@ -237,8 +293,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
@@ -246,14 +302,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>j</find>
-      <find>m_nav</find>
-      <find>14</find>
-      <find>lbt</find>
-      <find>lbtx2</find>
-      <find>22</find>
-      <find>LBTY</find>
-      <find>wrapy-nav_border</find>
       <find>新品推荐</find>
       <find>LBTX</find>
       <find>warp</find>
@@ -276,6 +324,14 @@
       <find>Register</find>
       <find>g-topL</find>
       <find>msg-error</find>
+      <find>click</find>
+      <find>cart</find>
+      <find>price</find>
+      <find>newprice</find>
+      <find>label</find>
+      <find>addcart</find>
+      <find>shoppping-cart-content-main</find>
+      <find>shop_num</find>
     </findStrings>
     <replaceStrings>
       <replace>16</replace>
@@ -306,18 +362,24 @@
         <option value="$PROJECT_DIR$/static/js/warpY.js" />
         <option value="$PROJECT_DIR$/static/json/shop.json" />
         <option value="$PROJECT_DIR$/static/js/shops.js" />
-        <option value="$PROJECT_DIR$/templates/cart.html" />
-        <option value="$PROJECT_DIR$/app/models.py" />
         <option value="$PROJECT_DIR$/static/css/register.css" />
         <option value="$PROJECT_DIR$/templates/test.html" />
         <option value="$PROJECT_DIR$/static/js/register.js" />
         <option value="$PROJECT_DIR$/templates/register.html" />
-        <option value="$PROJECT_DIR$/app/urls.py" />
+        <option value="$PROJECT_DIR$/static/js/login.js" />
+        <option value="$PROJECT_DIR$/templates/login.html" />
+        <option value="$PROJECT_DIR$/app/migrations/0001_initial.py" />
+        <option value="$PROJECT_DIR$/app/models.py" />
+        <option value="$PROJECT_DIR$/templates/addcartsuccess.html" />
+        <option value="$PROJECT_DIR$/static/css/addcartsuccess.css" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/detail.html" />
-        <option value="$PROJECT_DIR$/static/js/login.js" />
+        <option value="$PROJECT_DIR$/static/js/detail.js" />
+        <option value="$PROJECT_DIR$/static/css/cart.css" />
+        <option value="$PROJECT_DIR$/templates/cart.html" />
+        <option value="$PROJECT_DIR$/app/urls.py" />
         <option value="$PROJECT_DIR$/app/views.py" />
-        <option value="$PROJECT_DIR$/templates/login.html" />
+        <option value="$PROJECT_DIR$/static/js/cart.js" />
       </list>
     </option>
   </component>
@@ -329,8 +391,8 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="25" />
-    <option name="width" value="1920" />
-    <option name="height" value="1002" />
+    <option name="width" value="1073" />
+    <option name="height" value="809" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -371,6 +433,11 @@
             <path>
               <item name="yibanmall" type="b2602c69:ProjectViewProjectNode" />
               <item name="yibanmall" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yibanmall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yibanmall" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -378,12 +445,6 @@
               <item name="yibanmall" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yibanmall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yibanmall" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="yibanmall" type="b2602c69:ProjectViewProjectNode" />
@@ -401,20 +462,21 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../yibanmall.sql" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/css" />
+      <recent name="$PROJECT_DIR$/static/js" />
+      <recent name="$PROJECT_DIR$/static/others" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static/img" />
       <recent name="$PROJECT_DIR$/static/css" />
-      <recent name="$PROJECT_DIR$/static/js" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static/others" />
       <recent name="$PROJECT_DIR$/static/js" />
     </key>
   </component>
@@ -555,31 +617,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1920" height="1002" extended-state="6" />
+    <frame x="0" y="25" width="1916" height="811" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.5011389" side_tool="true" weight="0.15015975" />
       <window_info id="Favorites" order="1" sideWeight="0.5011389" side_tool="true" weight="0.15015975" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49886104" visible="true" weight="0.17518637" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49886104" weight="0.36741215" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32839224" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989154" weight="0.2878625" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49840257" weight="0.32839224" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49839914" weight="0.28717202" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3104612" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.50041497" side_tool="true" visible="true" weight="0.32383123" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32944608" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49958506" weight="0.328341" />
+      <window_info anchor="bottom" id="Database Changes" order="9" sideWeight="0.49946752" weight="0.3295325" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.50159746" side_tool="true" visible="true" weight="0.32798833" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32839224" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49958506" weight="0.32805756" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3264" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.20252025" />
+      <window_info anchor="right" id="Database" order="4" weight="0.28922093" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37339056" />
@@ -615,86 +677,13 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/static/json/LBT_X1.json" />
     <entry file="file://$PROJECT_DIR$/static/json/shop.json" />
-    <entry file="file://$PROJECT_DIR$/../a.txt" />
-    <entry file="das://e9339a12-892b-4e68-8a9c-2c95404ae40e/schema/yibanmall/table/app_goodsdetail" />
-    <entry file="das://e9339a12-892b-4e68-8a9c-2c95404ae40e/schema/yibanmall/table/app_goods_img">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="87" column="64" selection-start-line="87" selection-start-column="64" selection-end-line="87" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/jquery-1.12.3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1709">
-          <caret line="8985" selection-start-line="8985" selection-end-line="8985" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/register.css" />
     <entry file="file://$PROJECT_DIR$/templates/test.html" />
-    <entry file="file://$PROJECT_DIR$/static/js/shops.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../axf/Python1809AXF/axf/views.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="das://e9339a12-892b-4e68-8a9c-2c95404ae40e/schema/yibanmall/table/auth_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="38" column="44" lean-forward="true" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://e9339a12-892b-4e68-8a9c-2c95404ae40e/schema/yibanmall/table/app_userinfo">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="794">
-          <caret line="325" column="61" selection-start-line="325" selection-start-column="61" selection-end-line="325" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="212" column="59" selection-start-line="212" selection-start-column="37" selection-end-line="212" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="104" column="59" selection-start-line="104" selection-start-column="59" selection-end-line="104" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://e9339a12-892b-4e68-8a9c-2c95404ae40e/schema/yibanmall/table/auth_user" />
+    <entry file="das://e9339a12-892b-4e68-8a9c-2c95404ae40e/schema/yibanmall/table/app_userinfo" />
     <entry file="file://$PROJECT_DIR$/static/js/shop.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -705,28 +694,149 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/login.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views.py">
+    <entry file="file://$PROJECT_DIR$/static/js/login.js" />
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="160" column="47" selection-start-line="160" selection-start-column="47" selection-end-line="160" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1541583819374" expanded="true" signature="4587:4591" ph="..." />
-            <marker date="1541583819374" expanded="true" signature="4610:5428" ph="..." />
-          </folding>
+        <state relative-caret-position="231">
+          <caret line="175" column="62" selection-start-line="175" selection-start-column="62" selection-end-line="175" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
+    <entry file="file://$PROJECT_DIR$/static/js/shops.js" />
+    <entry file="das://e9339a12-892b-4e68-8a9c-2c95404ae40e/schema/yibanmall/table/django_migrations" />
+    <entry file="file://$PROJECT_DIR$/app/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="186" column="6" lean-forward="true" selection-start-line="186" selection-start-column="6" selection-end-line="186" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#li#3;n#ul#0;n#form#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="988">
+          <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../a.txt" />
+    <entry file="das://e9339a12-892b-4e68-8a9c-2c95404ae40e/schema/yibanmall/table/app_goods_img">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yibanmall/urls.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/jquery-1.12.3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1096">
+          <caret line="5716" column="90" selection-start-line="5716" selection-start-column="85" selection-end-line="5716" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/jquery.js" />
+    <entry file="file://$PROJECT_DIR$/static/css/bootstrap.css" />
+    <entry file="file://$PROJECT_DIR$/static/js/bootstrap.js" />
+    <entry file="file://$PROJECT_DIR$/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="321" lean-forward="true" selection-start-line="321" selection-end-line="321" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e9339a12-892b-4e68-8a9c-2c95404ae40e/schema/yibanmall/table/app_goodsdetail">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="506" column="51" selection-start-line="506" selection-start-column="51" selection-end-line="506" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/addcartsuccess.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="5" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/shops_cart.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/shoppingCart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2482">
+          <caret line="72" column="24" lean-forward="true" selection-end-line="225" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/addcartsuccess.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="109" column="65" selection-start-line="109" selection-start-column="65" selection-end-line="109" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="374" selection-start-line="374" selection-end-line="374" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e9339a12-892b-4e68-8a9c-2c95404ae40e/schema/yibanmall/table/app_cart">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/cart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <caret line="432" column="9" selection-start-line="432" selection-start-column="9" selection-end-line="432" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="122" column="77" selection-start-line="122" selection-start-column="77" selection-end-line="122" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="350" column="4" selection-start-line="350" selection-start-column="4" selection-end-line="353" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/cart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
         </state>
       </provider>
     </entry>

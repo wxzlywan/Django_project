@@ -20,7 +20,7 @@ class goodsDetail(models.Model):
     price = models.CharField(max_length=20)
     old_price = models.CharField(max_length=20)
     discount = models.CharField(max_length=20)
-    cart = models.CharField(max_length=20)
+    addcart = models.CharField(max_length=20)
 
 class goods_img(models.Model):
     big_img1 = models.CharField(max_length=100)
@@ -37,4 +37,13 @@ class UserInfo(models.Model):
     password = models.CharField(max_length=256)
     portrait = models.CharField(max_length=256)
     token = models.CharField(max_length=256)
+
+
+
+class Cart(models.Model):
+    user = models.ForeignKey(UserInfo)
+    good = models.ForeignKey(goodsDetail)
+    number = models.IntegerField()
+    size = models.CharField(max_length=20)
+    color = models.CharField(max_length=50)
 

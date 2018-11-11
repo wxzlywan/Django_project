@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw, ImageFont
 from django.shortcuts import render, redirect
 from django.http import JsonResponse, HttpResponse
 
-from app.models import lbtx1, lbty, warpy, goodsDetail, UserInfo
+from app.models import lbtx1, lbty, warpy, UserInfo, goodsDetail, Cart
 
 
 # Create your views here.
@@ -175,8 +175,7 @@ def login(request):
             return render(request, 'login.html', context={'acountErr': '账号不存在!', 'statusid': '-1'})
 
 
-def cart(request):
-    return render(request, 'cart.html')
+
 
 
 
@@ -193,9 +192,6 @@ def detail(request, shop_id):
         user = UserInfo.objects.get(token=token)
         data['username'] = user.username
         data['logout'] = '退出'
-    else:
-        data['login'] = '[登录]'
-        data['register'] = '[免费注册]'
 
     return render(request, 'detail.html', data)
 
@@ -213,7 +209,7 @@ def codeVerify(request):
 
     for i in range(0,100):
         xy = (random.randrange(0,width),random.randrange(0,height))
-        fill =  (random.randrange(255),random.randrange(255),random.randrange(255))
+        fill = (random.randrange(255),random.randrange(255),random.randrange(255))
         draw.point(xy,fill)
 
     str1 = '1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'
@@ -248,9 +244,9 @@ def codeVerify(request):
 
 def codeVerifyCheck(request):
     code1 = request.GET.get('codeVerify')
-    print(code1)
+    # print(code1)
     code2 = request.session['verify']
-    print(code2)
+    # print(code2)
 
     if code1 == code2:
         return JsonResponse({'msg':'验证码正确！','statusid':'1'})
@@ -261,3 +257,99 @@ def codeVerifyCheck(request):
 def logout(request):
     request.session.flush()
     return redirect('app:index')
+
+
+def addcart(request):
+    goodsid = request.GET.get('goodsid')
+
+    token = request.session.get('token')
+    size = request.GET.get('size')
+    color = request.GET.get('color')
+    number = request.GET.get('number')
+    # print(color)
+    # print(size)
+    # print(goodsid)
+
+    Data = {
+        'msg': '加入购物车成功',
+        'status': '1',
+    }
+
+    if token:
+        user = UserInfo.objects.get(token=token)
+        goods = goodsDetail.objects.get(pk=goodsid)
+        # print(goods.price)
+
+        carts = Cart.objects.filter(user=user).filter(good=goods).filter(size=size,color=color)
+        if carts.exists():
+            cart = carts.first()
+            cart.number = cart.number + int(number)
+            cart.save()
+        else:
+            cart = Cart()
+            cart.user = user
+            cart.number = int(number)
+            cart.size = size
+            cart.color = color
+            cart.good = goods
+            cart.save()
+        return JsonResponse(Data)
+    else:
+        Data['msg'] = '未登录'
+        Data['status'] = -1
+        return JsonResponse(Data)
+
+
+def addcartsuccess(request,goodsid,size,number,color):
+    token = request.session.get('token')
+    print(token)
+
+    goods = goodsDetail.objects.get(pk=goodsid)
+    user = UserInfo.objects.get(token=token)
+    cart = Cart.objects.filter(user=user).filter(good=goods).filter(size=size,color=color).first()
+
+    Data = {
+
+        'user':user,
+        'cart':cart,
+        'goods': goods,
+    }
+    return render(request,'addcartsuccess.html',Data)
+
+
+def cart(request):
+    token = request.session.get('token')
+
+    if token:
+        user = UserInfo.objects.get(token=token)
+        carts = Cart.objects.filter(user=user)
+
+        return render(request, 'cart.html',{'user':user,'carts':carts})
+    else:
+        return redirect('app:login')
+
+
+def addnumber(request):
+    cartid = request.GET.get('cartid')
+    cart = Cart.objects.get(pk=cartid)
+
+    cart.number += 1
+    cart.save()
+    return JsonResponse({'msg':'添加成功','status':'1','number':cart.number})
+
+
+def minusnumber(request):
+    cartid = request.GET.get('cartid')
+    cart = Cart.objects.get(pk=cartid)
+
+    cart.number -= 1
+    cart.save()
+    return JsonResponse({'msg':'减少成功','status':'1','number':cart.number})
+
+
+def cartdelete(request):
+    cartid = request.GET.get('cartid')
+    print(cartid)
+    cart = Cart.objects.get(pk=cartid)
+    cart.delete()
+    return JsonResponse({'msg':'删除成功','status':'1'})

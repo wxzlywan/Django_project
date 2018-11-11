@@ -188,9 +188,7 @@
 		<script src="{% static 'js/jquery-1.12.3.js' %}"></script>
 		<script src="{% static 'js/jquery.cookie.js' %}"></script>
 		<script src="{% static 'js/index.js' %}"></script>
-{#		<script src="{% static 'js/shops.js' %}"></script>#}
 		<script src="{% static 'js/warpY.js' %}"></script>
-{#		<script src="{% static 'js/LBTY.js' %}"></script>#}
         <script src="{% static 'js/LBTX1.js' %}"></script>
         <script src="{% static 'js/LBTX2.js' %}"></script>
         <script src="{% static 'js/LBTX3.js' %}"></script>
@@ -506,7 +504,7 @@
                             <span>{{ goods.price }}</span>
                             <del>{{ goods.old_price }}</del>
                             <i>{{ goods.discount }}</i>
-                            <label>{{ goods.cart }}</label>
+                            <label>{{ goods.addcart }}</label>
                         </li>
                     {% endfor %}
         		</ul>        		        		

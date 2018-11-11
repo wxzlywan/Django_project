@@ -21,6 +21,16 @@ urlpatterns = [
 
     url(r'^codeVerifyCheck/$', views.codeVerifyCheck, name='codeVerifyCheck'), # 验证码验证
 
+    url(r'^addcart/$',views.addcart,name='addcart'), # 加入购物车
+
+    url(r'^addcartsuccess/(\d+)/(\w+)/(\d+)/(\w+)/$',views.addcartsuccess,name='addcartsuccess'),  # 加入购物车成功
+
+    url(r'^addnumber/$', views.addnumber,name='addnumber'),
+
+    url(r'^minusnumber/$', views.minusnumber, name='minusnumber'),
+
+    url(r'^cartdelete/$',views.cartdelete, name='cartdelete'),
+
 ]
 
 
